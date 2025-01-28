@@ -41,7 +41,7 @@ function AppRoutes() {
       <Socialicons />
       <About />
 
-      <Clients />
+      {/* <Clients /> */}
       {/* <WhatWeDo /> */}
       <Portfolio /> 
         <Testimonial />

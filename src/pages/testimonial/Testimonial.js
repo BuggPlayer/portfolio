@@ -1,5 +1,6 @@
 import React from "react";
 import "./Testimonial.css";
+import { Col, Row } from "react-bootstrap";
 
 const testimonials = [
   {
@@ -33,18 +34,23 @@ const testimonials = [
 const TestimonialHorizontalScroll = () => {
   return (
     <div className="testimonial-container">
-      <h2 className="testimonial-title">Testimonials</h2>
+   <Row className="mb-5 mt-3 pt-md-3">
+          <Col lg="8">
+            <h1 className="display-4 mb-4"> Testimonial </h1>{" "}
+            <hr className="t_border my-4 ml-0 text-left" />
+          </Col>
+        </Row>
       <div className="testimonial-scroll">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="testimonial-card">
-            <img
+            {/* <img
               src={testimonial.image}
               alt={`${testimonial.name}'s picture`}
               className="testimonial-image"
               onError={(e) => {
                 // e.target.src = "https://via.placeholder.com/150"; // Fallback image
               }}
-            />
+            /> */}
             <div className="testimonial-content">
               <h3 className="testimonial-name">{testimonial.name}</h3>
               <p className="testimonial-role">{testimonial.role}</p>

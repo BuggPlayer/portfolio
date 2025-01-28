@@ -1,4 +1,8 @@
+import food from './assets/images/food.jpeg'
+import gym from './assets/images/gym.jpeg'
+// import yoga from './assets/images/yoga.jpeg'
 const logotext = "FAIZAN";
+
 const meta = {
     title: "Faizan khan",
     description: "I’m John Doe  Full stack devloper,currently working in Berlin",
@@ -87,20 +91,16 @@ const services = [{
 ];
 
 const dataportfolio = [{
-        img: "https://picsum.photos/400/?grayscale",
+        img: food,
         description: "The wisdom of life consists in the elimination of non-essentials.",
         link: "#",
     },
     {
-        img: "https://picsum.photos/400/800/?grayscale",
+        img: gym,
         description: "The wisdom of life consists in the elimination of non-essentials.",
         link: "#",
     },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
+
    
  
 ];
