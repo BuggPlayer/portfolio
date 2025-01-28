@@ -37,7 +37,7 @@ const Clients = () => {
               alt={`${client.name} logo`}
               className="client-logo"
               onError={(e) => {
-                e.target.src = "https://via.placeholder.com/150"; // Fallback image
+                // e.target.src = "https://via.placeholder.com/150"; // Fallback image
               }}
             />
             <p className="client-name">{client.name}</p>

@@ -1,48 +1,62 @@
 const logotext = "FAIZAN";
 const meta = {
-    title: "John Doe",
-    description: "I’m John Doe data scientist _ Full stack devloper,currently working in Berlin",
+    title: "Faizan khan",
+    description: "I’m John Doe  Full stack devloper,currently working in Berlin",
 };
 
 const introdata = {
-    title: "I’m John Doe",
+    title: "I’m Faizan Khan",
     animated: {
-        first: "I love coding",
-        second: "I code cool websites",
-        third: "I develop mobile apps",
+        first: "I build scalable web applications",
+        second: "I develop high-performance mobile apps",
+        third: "I create AI-driven solutions",
     },
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum",
+    description: 
+        "With 7+ years of experience, I specialize in full-stack web and mobile app development, alongside AI-driven solutions. Passionate about crafting innovative and scalable digital experiences.",
     your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
 };
 
+
 const dataabout = {
-    title: "abit about my self",
-    aboutme: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis dolor id ligula semper elementum feugiat pretium nulla. Nunc non commodo dolor. Nunc mollis dignissim facilisis. Morbi ut magna ultricies.",
+    title: "A Bit About Myself",
+    aboutme: 
+        "I am a passionate full-stack developer with expertise in building web and mobile applications. With 7+ years of experience, I have worked on diverse projects, delivering high-quality, scalable, and AI-powered solutions. I thrive on solving complex problems and turning ideas into reality.",
 };
+
 const worktimeline = [{
-        jobtitle: "Designer of week",
-        where: "YAdfi",
-        date: "2020",
-    },
-    {
-        jobtitle: "Designer of week",
-        where: "Jamalya",
-        date: "2019",
-    },
-    {
-        jobtitle: "Designer of week",
-        where: "ALquds",
-        date: "2019",
-    },
+    jobtitle: "Team Lead & Senior Software Engineer",
+    where: "Trigent",
+    date: "2024 - Present",
+},
+{
+    jobtitle: "Senior Software Engineer",
+    where: "Magic Soft",
+    date: "2023 - 2024",
+},
+{
+    jobtitle: "Fullstack Software Engineer",
+    where: "Ketton Tech",
+    date: "2019 - 2023",
+},
 ];
 
-const skills = [{
-        name: "Python",
+
+const skills = [
+    {
+        name: "FrontEnd",
         value: 90,
     },
     {
-        name: "Djano",
-        value: 85,
+        name: "Backend",
+        value: 90,
+    },
+    {
+        name: "Nextjs",
+        value: 90,
+    },
+    {
+        name: "react native",
+        value: 90,
     },
     {
         name: "Javascript",
@@ -59,16 +73,16 @@ const skills = [{
 ];
 
 const services = [{
-        title: "UI & UX Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+        title: "Web Development",
+        description: "Do your company need a new website or an enterprise-class web app or a web portal to help align your employees' workflows? Our [COMPANY NAME]'s custom web developers have the know-how and experience to build it for you. With a combination of our expertise in IT and ecommerce development, we enable companies from different industries to increase sales and expand their customer base"
     },
     {
         title: "Mobile Apps",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+        description: " Enhance your brand’s reach with best-in-class cross-platform mobile app development services from [COMPANY NAME]. Our clients get the advantage of a diverse technology stack, dedicated teams of developers, and high-quality, functionally rich solutions aligned with their requirements. At [COMPANY NAME], we deliver not just an app but an entirely redefined mobile experience.",
     },
     {
-        title: "Wordpress Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+        title: "Ecommerce",
+        description: "Do you want to gain a winning advantage for your business with an e-commerce store that delivers top-notch shopping experiences? Build one that excels in look and feel and gets you high conversions. To attract the desired audience, you need an e-commerce store that is visually stunning and conversion-focused.",
     },
 ];
 

@@ -42,7 +42,7 @@ function AppRoutes() {
       <About />
 
       <Clients />
-      <WhatWeDo />
+      {/* <WhatWeDo /> */}
       <Portfolio /> 
         <Testimonial />
         <ContactUs />

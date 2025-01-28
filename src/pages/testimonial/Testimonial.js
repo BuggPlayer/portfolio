@@ -42,7 +42,7 @@ const TestimonialHorizontalScroll = () => {
               alt={`${testimonial.name}'s picture`}
               className="testimonial-image"
               onError={(e) => {
-                e.target.src = "https://via.placeholder.com/150"; // Fallback image
+                // e.target.src = "https://via.placeholder.com/150"; // Fallback image
               }}
             />
             <div className="testimonial-content">
