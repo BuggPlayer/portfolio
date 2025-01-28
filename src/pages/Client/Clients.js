@@ -28,6 +28,7 @@ const Clients = () => {
   return (
     <section className="clients-section">
       <h2 className="clients-title">My Clients</h2>
+      <hr className="t_border my-4 ml-0 text-left" />
       <div className="clients-grid">
         {clients.map((client, index) => (
           <div key={index} className="client-card">
