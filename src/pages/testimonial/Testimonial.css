@@ -1,0 +1,120 @@
+/* Container styling */
+.testimonial-container {
+    background-color: var(--bg-color);
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .testimonial-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+  
+  /* Scrollable container */
+  .testimonial-scroll {
+    display: flex;
+    gap: 30px; /* Gap between cards */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 20px;
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+  }
+  
+  .testimonial-scroll::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+  }
+  
+  /* Individual testimonial card */
+  .testimonial-card {
+    flex: 0 0 80%; /* 80% of the viewport width */
+    max-width: 80%;
+    height: 140%; /* Increased height by 20% */
+    background-color: var(--primary-color);
+    border: 2px solid black; /* Black border */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid black; /* Black border for image */
+  }
+  
+  .testimonial-content {
+    text-align: center;
+    flex-grow: 1; /* Ensures the content stretches properly */
+  }
+  
+  .testimonial-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 5px;
+  }
+  
+  .testimonial-role {
+    font-size: 14px;
+    color: var(--text-color-2);
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-feedback {
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.4;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .testimonial-card {
+      flex: 0 0 90%; /* Cards take more width on smaller screens */
+      max-width: 90%;
+    }
+  
+    .testimonial-scroll {
+      gap: 20px; /* Reduce gap for smaller screens */
+    }
+  
+    .testimonial-title {
+      font-size: 20px; /* Smaller title font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .testimonial-card {
+      flex: 0 0 100%; /* Full width for very small screens */
+      max-width: 100%;
+      height: 160%; /* Add extra height on small screens */
+    }
+  
+    .testimonial-image {
+      width: 70px;
+      height: 70px; /* Smaller image */
+    }
+  
+    .testimonial-name {
+      font-size: 16px;
+    }
+  
+    .testimonial-feedback {
+      font-size: 14px;
+    }
+  }
+  
