@@ -10,6 +10,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Testimonial from "../pages/testimonial/Testimonial";
 import Footer from "../pages/footer/Footer";
 import Clients from "../pages/Client/Clients";
+import WhatWeDo from "../pages/WhatWeDo/WhatWeDo";
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -39,7 +40,9 @@ function AppRoutes() {
       <AnimatedRoutes />
       <Socialicons />
       <About />
+
       <Clients />
+      <WhatWeDo />
       <Portfolio /> 
         <Testimonial />
         <ContactUs />

@@ -1,0 +1,61 @@
+.what-we-do {
+  padding: 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--secondary-color);
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.service {
+  width: calc(50% - 1rem); /* 50% of the width with space between cards */
+  border: 2px solid black; /* Black border for clean look */
+  border-radius: 10px; /* Rounded corners */
+  padding: 1.5rem;
+  background: var(--bg-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px); /* Slight hover lift */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.service h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.service p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.service ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.service ul li {
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .service {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
