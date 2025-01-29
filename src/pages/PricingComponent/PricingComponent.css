@@ -1,0 +1,90 @@
+
+  
+  .pricing-container {
+    padding: 2rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+  }
+  
+  .pricing-cards {
+    width: 82%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+  }
+  
+  .pricing-card {
+    width: calc(33.33% - 2rem);
+    background: var(--primary-color);
+    border: 2px solid black;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  .pricing-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+  }
+  
+  .price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-color-3);
+  }
+  
+  .pricing-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .pricing-card ul li {
+    margin: 0.5rem 0;
+    color: var(--text-color-2);
+  }
+  
+  .pricing-button {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background: var(--text-color-3);
+    border: none;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .pricing-button:hover {
+    background: var(--secondary-color);
+    color: var(--text-color-3);
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .pricing-card {
+      width: calc(50% - 2rem);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .pricing-card {
+      width: 100%;
+    }
+  }
+  

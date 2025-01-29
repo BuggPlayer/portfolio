@@ -11,6 +11,7 @@ import Testimonial from "../pages/testimonial/Testimonial";
 import Footer from "../pages/footer/Footer";
 import Clients from "../pages/Client/Clients";
 import WhatWeDo from "../pages/WhatWeDo/WhatWeDo";
+import PricingComponent from "../pages/PricingComponent/PricingComponent";
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -45,6 +46,7 @@ function AppRoutes() {
       {/* <WhatWeDo /> */}
       <Portfolio /> 
         <Testimonial />
+        <PricingComponent />
         <ContactUs />
         <Footer />
     
