@@ -9,7 +9,7 @@ import AppRoutes from "./routes";
 import Headermain from "../header";
 import AnimatedCursor  from "../hooks/AnimatedCursor";
 import "./App.css";
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 function _ScrollToTop(props) {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -36,6 +36,7 @@ export default function App() {
         <Headermain />
         <AppRoutes />
       </ScrollToTop>
+      <SpeedInsights />
     </Router>
   );
 }
