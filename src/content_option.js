@@ -117,10 +117,10 @@ const contactConfig = {
 };
 
 const socialprofils = {
-    github: "https://github.com",
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    github: "https://github.com/BuggPlayer",
+    // facebook: "https://facebook.com",
+    linkedin: "https://www.linkedin.com/in/fullstack-hifzur/",
+    // twitter: "https://twitter.com",
 };
 export {
     meta,
