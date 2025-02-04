@@ -1,0 +1,64 @@
+/* WhatsApp Icon Styling */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .whatsapp-icon img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .whatsapp-icon img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Popup Styling */
+  .popup {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 250px;
+    text-align: center;
+  }
+  
+  .popup p {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .popup button {
+    background: #25d366; /* WhatsApp green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+  
+  .popup button:hover {
+    background: #128c7e; /* Darker green */
+  }
+  
+  .popup button:last-child {
+    background: #ff4d4d; /* Red for close button */
+  }
+  
+  .popup button:last-child:hover {
+    background: #cc0000;
+  }
