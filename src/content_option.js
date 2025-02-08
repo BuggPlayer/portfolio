@@ -1,23 +1,22 @@
 import food from './assets/images/food.jpeg'
 import gym from './assets/images/gym.jpeg'
 // import yoga from './assets/images/yoga.jpeg'
-const logotext = "FAIZAN";
+import homepage from "./assets/images/homepage.png"
+const logotext = "TECHORA";
 
 const meta = {
-    title: "Faizan khan",
-    description: "I’m John Doe  Full stack devloper,currently working in Berlin",
+    title: "Techora",
+    description: "We are Techora, a full-stack development agency specializing in innovative and scalable solutions, currently based in Berlin. Let’s build the future together.",
 };
 
 const introdata = {
-    title: "I’m Faizan Khan",
+    title: "We are Techora",
     animated: {
-        first: "I build scalable web applications",
-        second: "I develop high-performance mobile apps",
-        third: "I create AI-driven solutions",
+        first: "We build scalable web applications for startups and enterprises",
+        second: "We develop high-performance mobile apps for global audiences",
+        third: "We create AI-driven solutions to solve complex business challenges",
     },
-    description: 
-        "With 7+ years of experience, I specialize in full-stack web and mobile app development, alongside AI-driven solutions. Passionate about crafting innovative and scalable digital experiences.",
-    your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
+    your_img_url:homepage
 };
 
 
@@ -27,7 +26,8 @@ const dataabout = {
         "I am a passionate full-stack developer with expertise in building web and mobile applications. With 7+ years of experience, I have worked on diverse projects, delivering high-quality, scalable, and AI-powered solutions. I thrive on solving complex problems and turning ideas into reality.",
 };
 
-const worktimeline = [{
+const worktimeline = [
+    {
     jobtitle: "Team Lead & Senior Software Engineer",
     where: "Trigent",
     date: "2024 - Present",
@@ -42,6 +42,7 @@ const worktimeline = [{
     where: "Ketton Tech",
     date: "2019 - 2023",
 },
+
 ];
 
 
@@ -106,8 +107,8 @@ const dataportfolio = [{
 ];
 
 const contactConfig = {
-    YOUR_EMAIL: "fk331998@gmail.com",
-    YOUR_FONE: "(91)8850885962",
+    YOUR_EMAIL: "techaora@gmail.com",
+    YOUR_FONE: "(91)9920025516",
     description: " Have a project in mind? Let’s build something amazing together! Feel free to reach out to us for any inquiries, collaborations, or business opportunities.",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
@@ -119,8 +120,8 @@ const contactConfig = {
 const socialprofils = {
     github: "https://github.com/BuggPlayer",
     // facebook: "https://facebook.com",
-    linkedin: "https://www.linkedin.com/in/fullstack-hifzur/",
-    // twitter: "https://twitter.com",
+    linkedin: "https://www.linkedin.com/in/tech-aora-730a7934a/",
+    twitter: "https://x.com/techaora",
 };
 export {
     meta,
