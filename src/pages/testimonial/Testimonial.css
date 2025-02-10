@@ -84,10 +84,30 @@ margin-bottom: 3rem;
   
   /* Responsive Design */
   @media (max-width: 768px) {
-    .testimonial-card {
-      flex: 0 0 90%; /* Cards take more width on smaller screens */
-      max-width: 90%;
+    .testimonial-container {
+      background-color: var(--bg-color);
+      padding: 20px;
+      max-width: 100%;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+      width: 100%
     }
+  
+    .testimonial-card {
+      flex: 0 0 60%; /* 80% of the viewport width */
+      max-width: 600%;
+      background-color: var(--primary-color);
+      border: 1px solid var(--secondary-color);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      scroll-snap-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+    
   
     .testimonial-scroll {
       gap: 20px; /* Reduce gap for smaller screens */

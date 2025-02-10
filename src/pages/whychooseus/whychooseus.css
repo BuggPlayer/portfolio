@@ -66,11 +66,21 @@
     .advantage-card {
       width: calc(50% - 2rem);
     }
+    
   }
   
   @media screen and (max-width: 768px) {
     .advantage-card {
       width: 100%;
     }
+    .advantages-container {
+        width: 100%;
+        text-align: justify;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin: 0 auto;
+      }
   }
   
