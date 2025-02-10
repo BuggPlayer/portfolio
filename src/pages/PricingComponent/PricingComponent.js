@@ -12,6 +12,12 @@ const PricingComponent = () => {
         "E-commerce Integration",
         "Admin Panel & CMS",
       ],
+      freeBonuses: [
+        "SEO Analysis & Report",
+        "Basic SEO Setup",
+        "Social Media Integration",
+        "1-Hour Consultation",
+      ],
     },
     {
       title: "Mobile App Development",
@@ -21,6 +27,12 @@ const PricingComponent = () => {
         "Cross-Platform Support",
         "Push Notifications",
         "App Store Deployment",
+      ],
+      freeBonuses: [
+        "SEO Analysis & Report",
+        "Basic SEO Setup",
+        "Social Media Integration",
+        "1-Hour Consultation",
       ],
     },
     {
@@ -32,27 +44,13 @@ const PricingComponent = () => {
         "Product Management System",
         "SEO Optimized Store",
       ],
+      freeBonuses: [
+        "SEO Analysis & Report",
+        "Basic SEO Setup",
+        "Social Media Integration",
+        "1-Hour Consultation",
+      ],
     },
-    // {
-    //   title: "Digital Marketing",
-    //   price: "$799+",
-    //   features: [
-    //     "Social Media Marketing",
-    //     "SEO & Google Ads",
-    //     "Content Marketing",
-    //     "Brand Awareness Campaigns",
-    //   ],
-    // },
-    // {
-    //   title: "Graphic Designing",
-    //   price: "$499+",
-    //   features: [
-    //     "Logo & Branding",
-    //     "Business Cards & Flyers",
-    //     "Social Media Graphics",
-    //     "UI/UX Design",
-    //   ],
-    // },
   ];
 
   return (
@@ -63,9 +61,16 @@ const PricingComponent = () => {
           <div className="pricing-card" key={index}>
             <h2>{plan.title}</h2>
             <p className="price">{plan.price}</p>
+            <h3>Features:</h3>
             <ul>
               {plan.features.map((feature, idx) => (
                 <li key={idx}>{feature}</li>
+              ))}
+            </ul>
+            <h3>Free Bonuses:</h3>
+            <ul className="free-bonuses">
+              {plan.freeBonuses.map((bonus, idx) => (
+                <li key={idx}>{bonus}</li>
               ))}
             </ul>
             <button className="pricing-button">Get Started</button>

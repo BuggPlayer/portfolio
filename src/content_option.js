@@ -77,19 +77,74 @@ const skills = [
     },
 ];
 
-const services = [{
+// const services = [{
+//         title: "Web Development",
+//         description: "Do your company need a new website or an enterprise-class web app or a web portal to help align your employees' workflows? Our Techora's custom web developers have the know-how and experience to build it for you. With a combination of our expertise in IT and ecommerce development, we enable companies from different industries to increase sales and expand their customer base."
+//     },
+//     {
+//         title: "Mobile Apps",
+//         description: "Enhance your brand’s reach with best-in-class cross-platform mobile app development services from Techora. Our clients get the advantage of a diverse technology stack, dedicated teams of developers, and high-quality, functionally rich solutions aligned with their requirements. At Techora, we deliver not just an app but an entirely redefined mobile experience.",
+//     },
+//     {
+//         title: "Ecommerce",
+//         description: "Do you want to gain a winning advantage for your business with an e-commerce store that delivers top-notch shopping experiences? Build one that excels in look and feel and gets you high conversions. To attract the desired audience, you need an e-commerce store that is visually stunning and conversion-focused.",
+//     },
+// ];
+
+const services = [
+    {
         title: "Web Development",
-        description: "Do your company need a new website or an enterprise-class web app or a web portal to help align your employees' workflows? Our [COMPANY NAME]'s custom web developers have the know-how and experience to build it for you. With a combination of our expertise in IT and ecommerce development, we enable companies from different industries to increase sales and expand their customer base"
+        description: "Do your company need a new website or an enterprise-class web app or a web portal to help align your employees' workflows? Our Techora's custom web developers have the know-how and experience to build it for you. With a combination of our expertise in IT and ecommerce development, we enable companies from different industries to increase sales and expand their customer base.",
+        packageDetails: {
+            features: [
+                "Fully responsive, modern website tailored to your brand.",
+                "User-friendly design optimized for seamless navigation.",
+                "Integration with essential tools (contact forms, social media, etc.)."
+            ],
+            freeBonuses: [
+                "SEO Analysis & Report",
+                "Basic SEO Setup",
+                "Social Media Integration",
+                "1-Hour Consultation"
+            ]
+        }
     },
     {
         title: "Mobile Apps",
-        description: " Enhance your brand’s reach with best-in-class cross-platform mobile app development services from [COMPANY NAME]. Our clients get the advantage of a diverse technology stack, dedicated teams of developers, and high-quality, functionally rich solutions aligned with their requirements. At [COMPANY NAME], we deliver not just an app but an entirely redefined mobile experience.",
+        description: "Enhance your brand’s reach with best-in-class cross-platform mobile app development services from Techora. Our clients get the advantage of a diverse technology stack, dedicated teams of developers, and high-quality, functionally rich solutions aligned with their requirements. At Techora, we deliver not just an app but an entirely redefined mobile experience.",
+        packageDetails: {
+            features: [
+                "Cross-platform mobile app development (iOS & Android).",
+                "Intuitive UI/UX design to enhance user engagement.",
+                "Integration with your existing systems (e.g., CRM, payment gateways)."
+            ],
+            freeBonuses: [
+                "SEO Analysis & Report",
+                "Basic SEO Setup",
+                "Social Media Integration",
+                "1-Hour Consultation"
+            ]
+        }
     },
     {
         title: "Ecommerce",
         description: "Do you want to gain a winning advantage for your business with an e-commerce store that delivers top-notch shopping experiences? Build one that excels in look and feel and gets you high conversions. To attract the desired audience, you need an e-commerce store that is visually stunning and conversion-focused.",
-    },
+        packageDetails: {
+            features: [
+                "Visually stunning, conversion-focused online store.",
+                "Secure payment gateway integration.",
+                "Product catalog setup and inventory management."
+            ],
+            freeBonuses: [
+                "SEO Analysis & Report",
+                "Basic SEO Setup",
+                "Social Media Integration",
+                "1-Hour Consultation"
+            ]
+        }
+    }
 ];
+
 
 const dataportfolio = [{
         img: food,
