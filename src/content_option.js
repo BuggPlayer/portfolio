@@ -106,15 +106,16 @@ const dataportfolio = [{
  
 ];
 
+
 const contactConfig = {
     YOUR_EMAIL: "techaora@gmail.com",
     YOUR_FONE: "(91)9920025516",
     description: " Have a project in mind? Let’s build something amazing together! Feel free to reach out to us for any inquiries, collaborations, or business opportunities.",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_zp98nbg",
-    YOUR_TEMPLATE_ID: "template_xamolsv",
-    YOUR_USER_ID: "user_id",
+    YOUR_SERVICE_ID: "service_9czp66t",
+    YOUR_TEMPLATE_ID: "template_ahoomui",
+    YOUR_USER_ID: "dtuyuc6OUMv4nzQ5Z",
 };
 
 const socialprofils = {
