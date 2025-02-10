@@ -13,6 +13,7 @@ import Clients from "../pages/Client/Clients";
 import WhatWeDo from "../pages/WhatWeDo/WhatWeDo";
 import PricingComponent from "../pages/PricingComponent/PricingComponent";
 import WhatsAppPopup from "../components/WhatsAppPopup/WhatsAppPopup";
+import WhyChooseUsSection from "../pages/whychooseus/Whychoose";
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -45,9 +46,11 @@ function AppRoutes() {
 
       {/* <Clients /> */}
       {/* <WhatWeDo /> */}
+    
       <Portfolio /> 
         <Testimonial />
         <PricingComponent />
+        <WhyChooseUsSection />
         <ContactUs />
         <WhatsAppPopup />
         <Footer />
