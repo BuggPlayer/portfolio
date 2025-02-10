@@ -9,7 +9,7 @@ const WhatsAppPopup = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/8850885962", "_blank"); // Replace with your WhatsApp link
+    window.open("https://wa.me/", "_blank"); // Replace with your WhatsApp link
   };
 
   return (

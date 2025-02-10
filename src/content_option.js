@@ -93,13 +93,13 @@ const services = [{
 
 const dataportfolio = [{
         img: food,
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
+        description: "Simple and tasy recipes.",
+        link: "https://foodland-eight.vercel.app",
     },
     {
         img: gym,
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
+        description: "Responsive eCommerce Website | ReactJS + Next.js.",
+        link: "https://coders-gym.netlify.app/",
     },
 
    
