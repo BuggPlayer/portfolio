@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-// import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 import { FaTrophy, FaShieldAlt, FaClock } from "react-icons/fa";
 
 const HeroSection = ({ meta, introdata }) => {
@@ -15,15 +13,8 @@ const HeroSection = ({ meta, introdata }) => {
     });
   }, []);
 
-  console.log("introo" , introdata)
   return (
-    <section id="hero" className="hero-section bg-gradient-primary">
-      {/* <Helmet>
-        <meta charSet="utf-8" />
-        <title>{meta.title} | Transform Your Digital Presence</title>
-        <meta name="description" content={meta.description} />
-      </Helmet> */}
-
+    <section id="hero" className="hero-section">
       <div className="container-fluid">
         <div className="row align-items-center min-vh-100">
           {/* Text Content - Left Side */}

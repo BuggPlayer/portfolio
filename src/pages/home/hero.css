@@ -1,112 +1,52 @@
-/* Gradient Background */
-.bg-gradient-primary {
-    background: linear-gradient(135deg, #0a0c27 0%, #1a237e 100%);
-    color: #fff;
-  }
-  
-  /* Animated Blob Effect */
-  .animated-blob {
-    width: 600px;
-    height: 600px;
-    background: linear-gradient(45deg, #4a00e0, #8e2de2);
-    filter: blur(80px);
-    animation: blob-animate 15s infinite;
-    opacity: 0.7;
-  }
-  
-  @keyframes blob-animate {
-    0% {
-      transform: translate(-50%, -50%) scale(1) rotate(0deg);
-    }
-    50% {
-      transform: translate(-50%, -60%) scale(1.2) rotate(180deg);
-    }
-    100% {
-      transform: translate(-50%, -50%) scale(1) rotate(360deg);
-    }
-  }
-  
-  /* Text Highlights */
-  .text-highlight {
-    background: linear-gradient(90deg, #00ff87, #60efff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-  }
-  
-  /* Trust Badges */
-  .trust-badges {
-    margin-top: 2rem;
-  }
-  
-  .trust-badges small {
-    font-size: 0.9rem;
-  }
-  
-  /* Buttons */
-  .btn-primary {
-    background: linear-gradient(90deg, #00ff87, #60efff);
-    border: none;
-    color: #0a0c27;
-    font-weight: bold;
-    transition: transform 0.3s ease;
-  }
-  
-  .btn-primary:hover {
-    transform: translateY(-5px);
-  }
-  
-  .btn-outline-light {
-    border: 2px solid #fff;
-    color: #fff;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-outline-light:hover {
-    background: #fff;
-    color: #0a0c27;
-  }
-  
-  /* Hero Content */
-  .hero-content {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .hero-content h1 {
-    font-weight: 700;
-    line-height: 1.2;
-  }
-  
-  .hero-content p {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  /* Hero Visual */
-  .hero-visual img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 992px) {
-    .hero-section {
-      padding-top: 100px;
-      padding-bottom: 100px;
-    }
-  
-    .hero-content {
-      text-align: center;
-    }
-  
-    .trust-badges {
-      justify-content: center;
-    }
-  
-    .hero-visual {
-      margin-top: 2rem;
-    }
-  }
+/* Hero Section */
+.hero-section {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Text Highlights */
+.text-highlight {
+  background: linear-gradient(90deg, var(--secondary-color), #60efff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+[data-theme="light"] .text-highlight {
+  background: linear-gradient(90deg, var(--secondary-color-light), #60efff);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(90deg, var(--secondary-color), #60efff);
+  border: none;
+  color: var(--bg-color);
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+[data-theme="light"] .btn-primary {
+  background: linear-gradient(90deg, var(--secondary-color-light), #60efff);
+  color: var(--bg-color-light);
+}
+
+.btn-outline-light {
+  border: 2px solid var(--text-color-2);
+  color: var(--text-color-2);
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .btn-outline-light {
+  border: 2px solid var(--text-color-2-light);
+  color: var(--text-color-2-light);
+}
+
+.btn-outline-light:hover {
+  background: var(--text-color-2);
+  color: var(--bg-color);
+}
+
+[data-theme="light"] .btn-outline-light:hover {
+  background: var(--text-color-2-light);
+  color: var(--bg-color-light);
+}

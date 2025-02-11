@@ -16,11 +16,12 @@ import WhatsAppPopup from "../components/WhatsAppPopup/WhatsAppPopup";
 import WhyChooseUsSection from "../pages/whychooseus/Whychoose";
 import HeroSection from "../pages/home/Hero";
 import img from '../assets/images/homepage.png'
-import { Aboutus } from "../pages/about/About";
+// import { Aboutus } from "../pages/about/About";
 import { PortfolioUp } from "../pages/portfolio/Portfolio";
 import TestimonialUP from "../pages/testimonial/TestimonialUP";
 import PricingPlan from "../pages/PricingComponent/PricingPlan";
 import Whychooseme from "../pages/whychooseus/Whychooseme";
+import { Aboutus } from "../pages/about/About";
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>

@@ -1,132 +1,225 @@
 /* About Section */
 .about-section {
-    padding: 4rem 0;
+  padding: 4rem 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+[data-theme="light"] .about-section {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color-2);
+}
+
+[data-theme="light"] .section-title {
+  color: var(--text-color-2-light);
+}
+
+.section-divider {
+  border: 2px solid var(--secondary-color);
+  width: 50px;
+  margin-top: 10px;
+}
+
+[data-theme="light"] .section-divider {
+  border-color: var(--secondary-color-light);
+}
+
+/* About Content */
+.about-content {
+  margin-bottom: 4rem;
+}
+
+.about-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+[data-theme="light"] .about-title {
+  color: var(--secondary-color-light);
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+[data-theme="light"] .about-text {
+  color: var(--text-color-light);
+}
+
+/* Services Section */
+.services-section {
+  margin-top: 3rem;
+}
+
+/* Service Card */
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] .service-card {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 255, 135, 0.3);
+}
+
+[data-theme="light"] .service-card:hover {
+  box-shadow: 0px 10px 20px rgba(255, 107, 107, 0.3);
+}
+
+/* Service Icon */
+.service-icon {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.service-icon .icon {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+
+[data-theme="light"] .service-icon .icon {
+  color: var(--secondary-color-light);
+}
+
+/* Service Title */
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color-2);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+[data-theme="light"] .service-title {
+  color: var(--text-color-2-light);
+}
+
+/* Service Description */
+.service-desc {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  text-align: center;
+}
+
+[data-theme="light"] .service-desc {
+  color: var(--text-color-light);
+}
+
+/* Feature List */
+.service-features {
+  margin-top: 1rem;
+  padding-left: 0;
+}
+
+.feature-item {
+  list-style: none;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+[data-theme="light"] .feature-item {
+  color: var(--text-color-light);
+}
+
+.feature-item::before {
+  content: "✔";
+  color: var(--secondary-color);
+  position: absolute;
+  left: 0;
+}
+
+[data-theme="light"] .feature-item::before {
+  color: var(--secondary-color-light);
+}
+
+/* Bonus Section */
+.bonus-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: var(--text-color-2);
+  display: flex;
+  align-items: center;
+}
+
+[data-theme="light"] .bonus-title {
+  color: var(--text-color-2-light);
+}
+
+.bonus-icon {
+  margin-right: 0.5rem;
+  color: var(--secondary-color);
+}
+
+[data-theme="light"] .bonus-icon {
+  color: var(--secondary-color-light);
+}
+
+.bonus-list {
+  padding-left: 0;
+}
+
+.bonus-item {
+  list-style: none;
+  font-size: 0.9rem;
+  color: #ffcc00;
+  margin-bottom: 0.3rem;
+}
+
+[data-theme="light"] .bonus-item {
+  color: #ff6b6b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 2rem 0;
   }
-  
+
   .section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #fff;
+    font-size: 2rem;
   }
-  
-  .section-divider {
-    border: 2px solid #00ff87;
-    width: 50px;
-    margin-top: 10px;
-  }
-  
-  /* About Content */
-  .about-content {
-    margin-bottom: 4rem;
-  }
-  
+
   .about-title {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #00ff87;
-  }
-  
-  .about-text {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  /* Services Section */
-  .services-section {
-    margin-top: 3rem;
-  }
-  
-  /* Service Card */
-  .service-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 20px rgba(0, 255, 135, 0.3);
-  }
-  
-  /* Service Title */
-  .service-title {
     font-size: 1.5rem;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 0.5rem;
   }
-  
-  /* Service Description */
-  .service-desc {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  /* Feature List */
-  .service-features {
-    margin-top: 1rem;
-    padding-left: 0;
-  }
-  
-  .feature-item {
-    list-style: none;
+
+  .about-text {
     font-size: 0.95rem;
-    color: #00ff87;
-    margin-bottom: 0.5rem;
   }
-  
-  /* Bonus Section */
-  .bonus-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-top: 1rem;
-    color: #fff;
+
+  .service-card {
+    padding: 1rem;
   }
-  
-  .bonus-list {
-    padding-left: 0;
+
+  .service-title {
+    font-size: 1.3rem;
   }
-  
-  .bonus-item {
-    list-style: none;
-    font-size: 0.9rem;
-    color: #ffcc00;
-    margin-bottom: 0.3rem;
+
+  .service-desc {
+    font-size: 0.95rem;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .about-section {
-      padding: 2rem 0;
-    }
-  
-    .section-title {
-      font-size: 2rem;
-    }
-  
-    .about-title {
-      font-size: 1.5rem;
-    }
-  
-    .about-text {
-      font-size: 0.95rem;
-    }
-  
-    .service-card {
-      padding: 1rem;
-    }
-  
-    .service-title {
-      font-size: 1.3rem;
-    }
-  
-    .service-desc {
-      font-size: 0.95rem;
-    }
-  }
-  
+}

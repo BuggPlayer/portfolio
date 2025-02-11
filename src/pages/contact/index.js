@@ -6,6 +6,7 @@ import { Container, Row, Col, Alert, Spinner } from "react-bootstrap";
 import { meta, contactConfig } from "../../content_option";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FaEnvelope, FaPhone, FaPaperPlane } from "react-icons/fa";
 
 export const ContactUs = () => {
   useEffect(() => {
@@ -80,9 +81,15 @@ export const ContactUs = () => {
         {/* Header Section */}
         <Row className="mb-5 mt-3 pt-md-3 text-center">
           <Col lg="12">
-            <h1 className="section-title" data-aos="fade-up">Get in Touch</h1>
-            <hr className="section-divider" />
-            <p className="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+            <h1 className="section-title" data-aos="fade-up">
+              Get in Touch
+            </h1>
+            <hr className="section-divider" data-aos="fade-up" data-aos-delay="100" />
+            <p
+              className="section-subtitle"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               🚀 Let’s build something extraordinary together!
             </p>
           </Col>
@@ -107,11 +114,17 @@ export const ContactUs = () => {
           {/* Contact Details */}
           <Col lg="5" className="contact-info" data-aos="fade-right">
             <h3 className="info-title">📩 Contact Information</h3>
-            <p><strong>Email:</strong> <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>{contactConfig.YOUR_EMAIL}</a></p>
+            <div className="info-item">
+              <FaEnvelope className="info-icon" />
+              <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>{contactConfig.YOUR_EMAIL}</a>
+            </div>
             {contactConfig.YOUR_FONE && (
-              <p><strong>Phone:</strong> {contactConfig.YOUR_FONE}</p>
+              <div className="info-item">
+                <FaPhone className="info-icon" />
+                <span>{contactConfig.YOUR_FONE}</span>
+              </div>
             )}
-            <p>{contactConfig.description}</p>
+            <p className="info-description">{contactConfig.description}</p>
           </Col>
 
           {/* Contact Form */}
@@ -153,7 +166,13 @@ export const ContactUs = () => {
               <Row>
                 <Col lg="12" className="form-group">
                   <button className="btn contact-btn" type="submit" disabled={status.loading}>
-                    {status.loading ? <Spinner animation="border" size="sm" /> : "Send Message"}
+                    {status.loading ? (
+                      <Spinner animation="border" size="sm" />
+                    ) : (
+                      <>
+                        <FaPaperPlane className="btn-icon" /> Send Message
+                      </>
+                    )}
                   </button>
                 </Col>
               </Row>

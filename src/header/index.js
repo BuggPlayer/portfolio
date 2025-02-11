@@ -4,6 +4,7 @@ import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { logotext, socialprofils } from "../content_option";
 import Themetoggle from "../components/themetoggle";
+import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
 
 const Headermain = () => {
   const [isActive, setActive] = useState(false);
@@ -19,7 +20,7 @@ const Headermain = () => {
         <div className="header-container d-flex align-items-center justify-content-between">
           {/* Logo */}
           <Link className="navbar-brand" to="/">
-            {logotext}
+            <span className="logo-text">{logotext}</span>
           </Link>
 
           {/* Theme Toggle & Menu Button */}
@@ -53,9 +54,15 @@ const Headermain = () => {
             {/* Social Media Links */}
             <div className="menu-footer">
               <div className="social-links">
-                <a href={socialprofils.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
-                <a href={socialprofils.github} target="_blank" rel="noopener noreferrer">Github</a>
-                <a href={socialprofils.twitter} target="_blank" rel="noopener noreferrer">Twitter</a>
+                <a href={socialprofils.facebook} target="_blank" rel="noopener noreferrer">
+                  <FaFacebook className="social-icon" />
+                </a>
+                <a href={socialprofils.github} target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="social-icon" />
+                </a>
+                <a href={socialprofils.twitter} target="_blank" rel="noopener noreferrer">
+                  <FaTwitter className="social-icon" />
+                </a>
               </div>
               <p className="copyright">© {new Date().getFullYear()} {logotext}</p>
             </div>

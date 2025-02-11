@@ -3,7 +3,8 @@ import "./TestimonialUP.css";
 import { Col, Row } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import avatar from '../../assets/images/avatar.svg'
 const testimonials = [
   {
     name: "John Doe",
@@ -31,7 +32,7 @@ const testimonials = [
   },
 ];
 
-const TestimonialUP= () => {
+const TestimonialUP = () => {
   const scrollRef = useRef(null);
 
   useEffect(() => {
@@ -42,17 +43,22 @@ const TestimonialUP= () => {
     <div className="testimonial-container">
       <Row className="mb-5 mt-3 pt-md-3 text-center">
         <Col lg="12">
-          <h1 className="section-title">Testimonials</h1>
-          <hr className="section-divider" />
+          <h1 className="section-title" data-aos="fade-up">Testimonials</h1>
+          <hr className="section-divider" data-aos="fade-up" data-aos-delay="100" />
         </Col>
       </Row>
 
       <div className="testimonial-scroll-wrapper">
         <div className="testimonial-scroll" ref={scrollRef}>
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="testimonial-card" data-aos="fade-up">
+            <div
+              key={index}
+              className="testimonial-card"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
               <img
-                src={testimonial.image}
+                src={avatar}
                 alt={`${testimonial.name}'s picture`}
                 className="testimonial-image"
                 onError={(e) => (e.target.src = "https://via.placeholder.com/150")}
@@ -60,7 +66,11 @@ const TestimonialUP= () => {
               <div className="testimonial-content">
                 <h3 className="testimonial-name">{testimonial.name}</h3>
                 <p className="testimonial-role">{testimonial.role}</p>
-                <p className="testimonial-feedback">"{testimonial.feedback}"</p>
+                <div className="testimonial-feedback">
+                  <FaQuoteLeft className="quote-icon" />
+                  <p>{testimonial.feedback}</p>
+                  <FaQuoteRight className="quote-icon" />
+                </div>
               </div>
             </div>
           ))}

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./PricingComponent.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FaCheck, FaGift } from "react-icons/fa";
 
 const pricingPlans = [
   {
@@ -66,16 +67,29 @@ const PricingPlan = () => {
       </p>
       <div className="pricing-cards">
         {pricingPlans.map((plan, index) => (
-          <div className="pricing-card" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
+          <div
+            className="pricing-card"
+            key={index}
+            data-aos="zoom-in"
+            data-aos-delay={index * 100}
+          >
             <h2 className="plan-title">{plan.title}</h2>
             <p className="price">{plan.price}</p>
             <h3 className="features-title">Features:</h3>
             <ul className="features-list">
-              {plan.features.map((feature, idx) => <li key={idx}>✔ {feature}</li>)}
+              {plan.features.map((feature, idx) => (
+                <li key={idx}>
+                  <FaCheck className="feature-icon" /> {feature}
+                </li>
+              ))}
             </ul>
-            <h3 className="bonus-title">Free Bonuses:</h3>
+            <h3 className="bonus-title">
+              <FaGift className="bonus-icon" /> Free Bonuses:
+            </h3>
             <ul className="bonus-list">
-              {plan.freeBonuses.map((bonus, idx) => <li key={idx}>🎁 {bonus}</li>)}
+              {plan.freeBonuses.map((bonus, idx) => (
+                <li key={idx}>🎁 {bonus}</li>
+              ))}
             </ul>
             <button className="pricing-button">Get Started</button>
           </div>
