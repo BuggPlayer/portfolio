@@ -1,8 +1,8 @@
 /* About Section */
 .about-section {
-  padding: 4rem 0;
   background-color: var(--bg-color);
   color: var(--text-color);
+  padding: 4rem 2rem;
 }
 
 [data-theme="light"] .about-section {
@@ -10,6 +10,7 @@
   color: var(--text-color-light);
 }
 
+/* Section Title */
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -23,7 +24,7 @@
 .section-divider {
   border: 2px solid var(--secondary-color);
   width: 50px;
-  margin-top: 10px;
+  margin: 1rem 0;
 }
 
 [data-theme="light"] .section-divider {
@@ -64,11 +65,11 @@
 .service-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  padding: 1.5rem;
+  padding: 2rem;
   margin-bottom: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 [data-theme="light"] .service-card {
@@ -77,12 +78,12 @@
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 20px rgba(0, 255, 135, 0.3);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 255, 135, 0.3);
 }
 
 [data-theme="light"] .service-card:hover {
-  box-shadow: 0px 10px 20px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
 }
 
 /* Service Icon */
@@ -105,7 +106,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-color-2);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -170,8 +171,9 @@
 }
 
 .bonus-icon {
-  margin-right: 0.5rem;
+  font-size: 1.25rem;
   color: var(--secondary-color);
+  margin-right: 0.5rem;
 }
 
 [data-theme="light"] .bonus-icon {
@@ -196,7 +198,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .about-section {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
   }
 
   .section-title {
@@ -212,14 +214,44 @@
   }
 
   .service-card {
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
   .service-title {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 
   .service-desc {
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .about-title {
+    font-size: 1.25rem;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+  }
+
+  .service-card {
+    padding: 1rem;
+  }
+
+  .service-title {
+    font-size: 1.1rem;
+  }
+
+  .service-desc {
+    font-size: 0.9rem;
   }
 }

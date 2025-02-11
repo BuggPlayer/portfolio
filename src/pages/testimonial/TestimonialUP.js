@@ -4,7 +4,8 @@ import { Col, Row } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
-import avatar from '../../assets/images/avatar.svg'
+import avatar from "../../assets/images/avatar.svg";
+
 const testimonials = [
   {
     name: "John Doe",

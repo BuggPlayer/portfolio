@@ -51,48 +51,47 @@ export const Aboutus = () => {
             </h3>
           </Col>
           <Col lg="7">
-            {services.map((service, i) => (
-              <Card
-                className="service-card"
-                key={i}
-                data-aos="fade-up"
-                data-aos-delay={i * 100}
-              >
-                <Card.Body>
-                  <div className="service-icon">
-                    {service.title === "Web Development" && (
-                      <FaRocket className="icon" />
-                    )}
-                    {service.title === "Mobile Apps" && (
-                      <FaCogs className="icon" />
-                    )}
-                    {service.title === "Ecommerce" && (
-                      <FaChartLine className="icon" />
-                    )}
-                  </div>
-                  <h5 className="service-title">{service.title}</h5>
-                  <p className="service-desc">{service.description}</p>
-                  <h6 className="feature-title">What You Get:</h6>
-                  <ul className="service-features">
-                    {service.packageDetails.features.map((feature, index) => (
-                      <li key={index} className="feature-item">
-                        ✔ {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <h6 className="bonus-title">
-                    <FaGift className="bonus-icon" /> Free Bonuses:
-                  </h6>
-                  <ul className="bonus-list">
-                    {service.packageDetails.freeBonuses.map((bonus, index) => (
-                      <li key={index} className="bonus-item">
-                        🎁 {bonus}
-                      </li>
-                    ))}
-                  </ul>
-                </Card.Body>
-              </Card>
-            ))}
+            <Row>
+              {services.map((service, i) => (
+                <Col md="6" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
+                  <Card className="service-card">
+                    <Card.Body>
+                      <div className="service-icon">
+                        {service.title === "Web Development" && (
+                          <FaRocket className="icon" />
+                        )}
+                        {service.title === "Mobile Apps" && (
+                          <FaCogs className="icon" />
+                        )}
+                        {service.title === "Ecommerce" && (
+                          <FaChartLine className="icon" />
+                        )}
+                      </div>
+                      <h5 className="service-title">{service.title}</h5>
+                      <p className="service-desc">{service.description}</p>
+                      <h6 className="feature-title">What You Get:</h6>
+                      <ul className="service-features">
+                        {service.packageDetails.features.map((feature, index) => (
+                          <li key={index} className="feature-item">
+                            ✔ {feature}
+                          </li>
+                        ))}
+                      </ul>
+                      <h6 className="bonus-title">
+                        <FaGift className="bonus-icon" /> Free Bonuses:
+                      </h6>
+                      <ul className="bonus-list">
+                        {service.packageDetails.freeBonuses.map((bonus, index) => (
+                          <li key={index} className="bonus-item">
+                            🎁 {bonus}
+                          </li>
+                        ))}
+                      </ul>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
           </Col>
         </Row>
       </Container>
