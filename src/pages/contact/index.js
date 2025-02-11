@@ -1,25 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { meta } from "../../content_option";
-import { Container, Row, Col, Alert } from "react-bootstrap";
-import { contactConfig } from "../../content_option";
+import { Container, Row, Col, Alert, Spinner } from "react-bootstrap";
+import { meta, contactConfig } from "../../content_option";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const ContactUs = () => {
-  const [formData, setFormdata] = useState({
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
+  const [formData, setFormData] = useState({
     email: "",
     name: "",
     message: "",
+  });
+
+  const [status, setStatus] = useState({
     loading: false,
     show: false,
-    alertmessage: "",
+    alertMessage: "",
     variant: "",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormdata({ loading: true });
+    setStatus({ loading: true, show: false });
 
     const templateParams = {
       from_name: formData.email,
@@ -37,98 +45,85 @@ export const ContactUs = () => {
       )
       .then(
         (result) => {
-          console.log("resulr" , result.text);
-          setFormdata({
+          setStatus({
             loading: false,
-            alertmessage: "SUCCESS! ,Thankyou for your messege",
+            alertMessage: "✅ Thank you! Your message has been sent successfully.",
             variant: "success",
             show: true,
           });
+          setFormData({ email: "", name: "", message: "" });
         },
         (error) => {
-          console.log(error.text);
-          setFormdata({
-            alertmessage: `Faild to send!,${error.text}`,
+          setStatus({
+            loading: false,
+            alertMessage: `❌ Failed to send! ${error.text}`,
             variant: "danger",
             show: true,
           });
-          document.getElementsByClassName("co_alert")[0].scrollIntoView();
         }
       );
   };
 
   const handleChange = (e) => {
-    setFormdata({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
     <HelmetProvider>
-      <Container>
+      <Container className="contact-container">
         <Helmet>
           <meta charSet="utf-8" />
           <title>{meta.title} | Contact</title>
           <meta name="description" content={meta.description} />
         </Helmet>
-        <Row className="mb-5 mt-3 pt-md-3">
-          <Col lg="8">
-            <h1 className="display-4 mb-4">Get in touch</h1>
-            <hr className="t_border my-4 ml-0 text-left" />
+
+        {/* Header Section */}
+        <Row className="mb-5 mt-3 pt-md-3 text-center">
+          <Col lg="12">
+            <h1 className="section-title" data-aos="fade-up">Get in Touch</h1>
+            <hr className="section-divider" />
+            <p className="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+              🚀 Let’s build something extraordinary together!
+            </p>
           </Col>
         </Row>
-        <Row className="sec_sp">
+
+        {/* Alert Message */}
+        <Row>
           <Col lg="12">
             <Alert
-              //show={formData.show}
-              variant={formData.variant}
-              className={`rounded-0 co_alert ${
-                formData.show ? "d-block" : "d-none"
-              }`}
-              onClose={() => setFormdata({ show: false })}
+              variant={status.variant}
+              className={`rounded-0 contact-alert ${status.show ? "d-block" : "d-none"}`}
+              onClose={() => setStatus({ ...status, show: false })}
               dismissible
             >
-              <p className="my-0">{formData.alertmessage}</p>
+              <p className="my-0">{status.alertMessage}</p>
             </Alert>
           </Col>
-          <Col lg="5" className="mb-5">
+        </Row>
 
-
-
-       
-
-
-
-
-            <h3 className="color_sec py-4">   🚀 Let’s Build Something Extraordinary Together!</h3>
-            <address>
-              <strong>Email:</strong>{" "}
-              <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>
-                {contactConfig.YOUR_EMAIL}
-              </a>
-              <br />
-              <br />
-              {contactConfig.hasOwnProperty("YOUR_FONE") ? (
-                <p>
-                  <strong>Phone:</strong> {contactConfig.YOUR_FONE}
-                </p>
-              ) : (
-                ""
-              )}
-            </address>
+        {/* Contact Form & Details */}
+        <Row className="contact-section">
+          {/* Contact Details */}
+          <Col lg="5" className="contact-info" data-aos="fade-right">
+            <h3 className="info-title">📩 Contact Information</h3>
+            <p><strong>Email:</strong> <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>{contactConfig.YOUR_EMAIL}</a></p>
+            {contactConfig.YOUR_FONE && (
+              <p><strong>Phone:</strong> {contactConfig.YOUR_FONE}</p>
+            )}
             <p>{contactConfig.description}</p>
           </Col>
-          <Col lg="7" className="d-flex align-items-center">
-            <form onSubmit={handleSubmit} className="contact__form w-100">
+
+          {/* Contact Form */}
+          <Col lg="7" className="contact-form-container" data-aos="fade-left">
+            <form onSubmit={handleSubmit} className="contact-form">
               <Row>
                 <Col lg="6" className="form-group">
                   <input
                     className="form-control"
-                    id="name"
                     name="name"
-                    placeholder="Name"
-                    value={formData.name || ""}
+                    placeholder="Your Name"
+                    value={formData.name}
                     type="text"
                     required
                     onChange={handleChange}
@@ -136,32 +131,29 @@ export const ContactUs = () => {
                 </Col>
                 <Col lg="6" className="form-group">
                   <input
-                    className="form-control rounded-0"
-                    id="email"
+                    className="form-control"
                     name="email"
-                    placeholder="Email"
+                    placeholder="Your Email"
                     type="email"
-                    value={formData.email || ""}
+                    value={formData.email}
                     required
                     onChange={handleChange}
                   />
                 </Col>
               </Row>
               <textarea
-                className="form-control rounded-0"
-                id="message"
+                className="form-control"
                 name="message"
-                placeholder="Message"
+                placeholder="Your Message"
                 rows="5"
                 value={formData.message}
                 onChange={handleChange}
                 required
               ></textarea>
-              <br />
               <Row>
                 <Col lg="12" className="form-group">
-                  <button className="btn ac_btn" type="submit">
-                    {formData.loading ? "Sending..." : "Send"}
+                  <button className="btn contact-btn" type="submit" disabled={status.loading}>
+                    {status.loading ? <Spinner animation="border" size="sm" /> : "Send Message"}
                   </button>
                 </Col>
               </Row>
@@ -169,7 +161,6 @@ export const ContactUs = () => {
           </Col>
         </Row>
       </Container>
-      <div className={formData.loading ? "loading-bar" : "d-none"}></div>
     </HelmetProvider>
   );
 };

@@ -1,0 +1,122 @@
+/* Pricing Section */
+.pricing-container {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0, 255, 135, 0.2), rgba(255, 255, 255, 0));
+    border-radius: 15px;
+  }
+  
+  .section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+  }
+  
+  /* Pricing Cards Grid */
+  .pricing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  /* Pricing Card */
+  .pricing-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2.5rem;
+    width: 330px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(0, 255, 135, 0.4);
+  }
+  
+  /* Plan Title */
+  .plan-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #00ff87;
+  }
+  
+  /* Price */
+  .price {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+  }
+  
+  /* Features & Bonuses */
+  .features-title,
+  .bonus-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 1rem;
+  }
+  
+  .features-list,
+  .bonus-list {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+  
+  .features-list li,
+  .bonus-list li {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Call to Action Button */
+  .pricing-button {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.8rem;
+    background: #00ff87;
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .pricing-button:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .pricing-container {
+      padding: 3rem 1rem;
+    }
+  
+    .section-title {
+      font-size: 2.3rem;
+    }
+  
+    .pricing-card {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+  

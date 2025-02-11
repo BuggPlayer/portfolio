@@ -1,0 +1,83 @@
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0, 255, 135, 0.2), rgba(255, 255, 255, 0));
+    border-radius: 15px;
+  }
+  
+  .section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+  }
+  
+  /* Advantages Grid */
+  .advantages-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  /* Advantage Card */
+  .advantage-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .advantage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 255, 135, 0.3);
+  }
+  
+  /* Icon */
+  .icon {
+    font-size: 2.5rem;
+    color: #00ff87;
+    margin-bottom: 1rem;
+  }
+  
+  /* Title & Description */
+  .advantage-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00ff87;
+  }
+  
+  .advantage-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0.5rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .why-choose-us {
+      padding: 3rem 1rem;
+    }
+  
+    .section-title {
+      font-size: 2.3rem;
+    }
+  
+    .advantages-container {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+  

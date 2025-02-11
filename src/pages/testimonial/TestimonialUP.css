@@ -1,0 +1,111 @@
+/* Testimonial Section */
+.testimonial-container {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .section-divider {
+    border: 2px solid #00ff87;
+    width: 50px;
+    margin: 10px auto;
+  }
+  
+  /* Horizontal Scroll Wrapper */
+  .testimonial-scroll-wrapper {
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+  
+  .testimonial-scroll {
+    display: flex;
+    gap: 2rem;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+  }
+  
+  /* Hide Scrollbar */
+  .testimonial-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .testimonial-scroll-wrapper {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Testimonial Card */
+  .testimonial-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    min-width: 300px;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 255, 135, 0.3);
+  }
+  
+  /* Testimonial Image */
+  .testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 2px solid #00ff87;
+  }
+  
+  /* Testimonial Content */
+  .testimonial-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #00ff87;
+    margin-bottom: 0.3rem;
+  }
+  
+  .testimonial-role {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.5rem;
+  }
+  
+  .testimonial-feedback {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .testimonial-container {
+      padding: 2rem 0;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .testimonial-card {
+      min-width: 250px;
+    }
+  
+    .testimonial-image {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  
