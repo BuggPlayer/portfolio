@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./WhatsAppPopup.css"; // We'll create this CSS file next
+import "./WhatsAppPopup.css";
 
 const WhatsAppPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,8 +26,14 @@ const WhatsAppPopup = () => {
       {isOpen && (
         <div className="popup">
           <p>Need help? Chat with us on WhatsApp!</p>
-          <button onClick={handleWhatsAppClick}>Open WhatsApp</button>
-          <button onClick={togglePopup}>Close</button>
+          <div className="popup-buttons">
+            <button className="whatsapp-button" onClick={handleWhatsAppClick}>
+              Open WhatsApp
+            </button>
+            <button className="close-button" onClick={togglePopup}>
+              Close
+            </button>
+          </div>
         </div>
       )}
     </div>

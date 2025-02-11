@@ -1,6 +1,7 @@
 /* Header Container */
 .site-header {
   background-color: var(--bg-color);
+  color: var(--text-color);
   padding: 1rem 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -249,5 +250,77 @@
 
   .copyright {
     font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 1rem;
+  }
+
+  .menu-container {
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .menu-list a {
+    font-size: 0.9rem;
+  }
+
+  .social-icon {
+    font-size: 1rem;
+  }
+
+  .copyright {
+    font-size: 0.7rem;
+  }
+}
+
+/* Edge Cases */
+/* Very Small Screens (e.g., iPhone 5/SE) */
+@media (max-width: 320px) {
+  .site-header {
+    padding: 0.5rem;
+  }
+
+  .menu-container {
+    width: 180px;
+    padding: 0.75rem;
+  }
+
+  .menu-list a {
+    font-size: 0.8rem;
+  }
+
+  .social-icon {
+    font-size: 0.9rem;
+  }
+
+  .copyright {
+    font-size: 0.65rem;
+  }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-height: 480px) and (orientation: landscape) {
+  .site-header {
+    padding: 1rem;
+  }
+
+  .menu-container {
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .menu-list a {
+    font-size: 0.9rem;
+  }
+
+  .social-icon {
+    font-size: 1rem;
+  }
+
+  .copyright {
+    font-size: 0.7rem;
   }
 }
