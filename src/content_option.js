@@ -20,10 +20,16 @@ const introdata = {
 };
 
 
+// const dataabout = {
+//     title: "A Bit About Myself",
+//     aboutme: 
+//         "I am a passionate full-stack developer with expertise in building web and mobile applications. With 7+ years of experience, I have worked on diverse projects, delivering high-quality, scalable, and AI-powered solutions. I thrive on solving complex problems and turning ideas into reality.",
+// };
+
 const dataabout = {
-    title: "A Bit About Myself",
+    title: "Transforming Tech Challenges into Scalable Solutions",
     aboutme: 
-        "I am a passionate full-stack developer with expertise in building web and mobile applications. With 7+ years of experience, I have worked on diverse projects, delivering high-quality, scalable, and AI-powered solutions. I thrive on solving complex problems and turning ideas into reality.",
+        "Techora specializes in AI-powered web and mobile app development, helping businesses fix what’s broken: stuck projects, inefficient systems, and disconnected tools. Clients see results like 40% faster workflows and 25% revenue growth through clean architecture (MERN/MEAN stack), AI automation, and seamless API integrations. With a 48-hour bug-fix guarantee and a track record of delivering 30+ projects under budget, Techora turns chaotic tech stacks into scalable assets. Let’s turn frustrations into a competitive edge.",
 };
 
 const worktimeline = [
@@ -164,8 +170,8 @@ const dataportfolio = [{
 
 const contactConfig = {
     YOUR_EMAIL: "techaora@gmail.com",
-    YOUR_FONE: "(91)9920025516",
-    description: " Have a project in mind? Let’s build something amazing together! Feel free to reach out to us for any inquiries, collaborations, or business opportunities.",
+    // YOUR_FONE: "(91)9920025516",
+    description: " Have an idea or a project in mind? Our expert team is ready to bring it to life! 💡Get in touch today, and we’ll reach out to you shortly to discuss your needs and craft the perfect solution for your business.",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
     YOUR_SERVICE_ID: "service_9czp66t",
