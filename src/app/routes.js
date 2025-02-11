@@ -14,6 +14,8 @@ import WhatWeDo from "../pages/WhatWeDo/WhatWeDo";
 import PricingComponent from "../pages/PricingComponent/PricingComponent";
 import WhatsAppPopup from "../components/WhatsAppPopup/WhatsAppPopup";
 import WhyChooseUsSection from "../pages/whychooseus/Whychoose";
+import HeroSection from "../pages/home/Hero";
+import img from '../assets/images/homepage.png'
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -40,7 +42,12 @@ const AnimatedRoutes = withRouter(({ location }) => (
 function AppRoutes() {
   return (
     <div className="s_c">
-      <AnimatedRoutes />
+        {/* <AnimatedRoutes /> */}
+      <HeroSection
+  // meta={{ title: "Techora", description: "Your digital transformation partner" }}
+  introdata={{ your_img_url: img}}
+/>
+    
       <Socialicons />
       <About />
 
